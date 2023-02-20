@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="UI.Setup"
+    BackgroundColor="#272D2D">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Margin="20"
+            Spacing="10"
+            VerticalOptions="Center">
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Margin="20"
+                Spacing="10"
+            >
+                <Label Text="Racers.csv" VerticalOptions="Center" FontSize="18" />
+                <Entry 
+                    x:Name="RacersCSVEntry"
+                    Text="{Binding RacersFilePath}"
+                    Placeholder="C:/Path/to/Racers.csv"
+                    WidthRequest="400"
+                    Margin="20"
+                 />
+                <Button
+                    x:Name="RacersCSVSelector"
+                    Text="Browse"
+                    Clicked="OnBrowseClicked"
+                    ClassId="racer"
+                    HeightRequest="36"
+                    TextColor="#272D2D"
+                    BackgroundColor="#B7B7B7"
+                />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Margin="20"
+                Spacing="10"
+            >
+                <Label Text="Groups.csv" VerticalOptions="Center" FontSize="18" />
+                <Entry 
+                    x:Name="GroupsCSVEntry"
+                    Text="{Binding GroupsFilePath}"
+                    Placeholder="C:/Path/to/Groups.csv"
+                    WidthRequest="400"
+                    Margin="20"
+                 />
+                <Button
+                    x:Name="GroupsCSVSelector"
+                    Text="Browse"
+                    Clicked="OnBrowseClicked"
+                    ClassId="group"
+                    HeightRequest="36"
+                    TextColor="#272D2D"
+                    BackgroundColor="#B7B7B7"
+                />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Margin="20"
+                Spacing="10"
+            >
+                <Label Text="Sensors.csv" VerticalOptions="Center" FontSize="18" />
+                <Entry 
+                    x:Name="SensorsCSVEntry"
+                    Text="{Binding SensorsFilePath}"
+                    Placeholder="C:/Path/to/Sensors.csv"
+                    WidthRequest="400"
+                    Margin="20"
+                 />
+                <Button
+                    x:Name="SensorsCSVSelector"
+                    Text="Browse"
+                    Clicked="OnBrowseClicked"
+                    ClassId="sensor"
+                    HeightRequest="36"
+                    TextColor="#272D2D"
+                    BackgroundColor="#B7B7B7"
+                />
+            </HorizontalStackLayout>
+            <Button
+                x:Name="StartBtn"
+                Text="Start"
+                Clicked="OnStartClicked"
+                FontSize="18"
+                MaximumWidthRequest="100"
+                TextColor="#272D2D"
+                BackgroundColor="#B7B7B7"
+            />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

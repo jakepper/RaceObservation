@@ -16,7 +16,7 @@
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.ui</ApplicationId>
-		<ApplicationIdGuid>4f61a312-2991-4c39-85e1-f5a7784b9e7c</ApplicationIdGuid>
+		<ApplicationIdGuid>b3076c78-54e8-42f8-b8df-c8bba1af889a</ApplicationIdGuid>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -46,6 +46,22 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Setup.xaml.cs">
+	    <DependentUpon>Setup.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\Main.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Program\Program.csproj" />
 	</ItemGroup>
 
 </Project>
