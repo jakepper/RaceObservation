@@ -112,7 +112,7 @@ namespace Program
 
                 racer.Notify();
 
-                Console.WriteLine($"Notified Observers of Updated Racer with BIB# {racer.Bib}\n");
+                Debug.WriteLine($"Notified Observers of Updated Racer with BIB# {racer.Bib}\n");
             }
 
             Debug.WriteLine("Cheating Observer");
