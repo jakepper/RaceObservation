@@ -6,6 +6,8 @@ I apologize, I was unable to get the GUI portion of the project into a fully fun
 
 The Program is still runnable and will process the incoming messages however the only active observer is the CheatingScreen and the results of my cheat detection are logged to the Debug Console.
 
+To run the program swap the `Project Startups` tab in Visual Studio to `UI` and run.
+
 ## Implementation Notes
 ### Observer 'Interface'
 
@@ -40,3 +42,5 @@ The Program is still runnable and will process the incoming messages however the
 ## Unit Tests
 
 Unit Tests are minimal but visible in [UnitTests.cs](./tests/Program.Tests/UnitTests.cs)
+
+Theses are executable by changing the `Project Startups` tab in Visual Studio to `Program.Tests` and run.
